@@ -109,7 +109,7 @@ async function processQuery (user: User, req: Request, res: Response, next: Next
         res.status(200).json(await botUtils[response.handler](req.body.query, user))
       } else {
         res.status(200).json({
-          action 'response',
+          action: 'response',
           body: config.get('application.chatBot.defaultResponse')
         })
       }
